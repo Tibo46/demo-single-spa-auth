@@ -1,0 +1,31 @@
+body.loading {
+  overflow: hidden;
+}
+
+.splash-screen {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  z-index: 2000;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.3s linear 0s, opacity 0.3s ease 0s;
+}
+
+body.loading .splash-screen {
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0s linear 0s, opacity 0.3s ease 0s;
+}
+.splash-screen svg {
+  width: 200px;
+  max-width: 100%;
+}
